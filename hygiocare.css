@@ -1,12 +1,13 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    overflow-x: hidden; 
 }
 
-/* NAVIGATION */
 .top-bar {
     background-color: #4a0e4e;
     padding-bottom: 10px;
+    width: 100%;
 } 
 
 .logo-wrap {
@@ -18,7 +19,7 @@ body {
 }
 
 .shield {
-    height: 120px;
+    height: 80px; 
     width: auto;
 }
 
@@ -28,7 +29,7 @@ body {
     font-weight: bold;
 }
 
-.brand-name span {
+.brand-name span { 
     color: #ff007f; 
 }
 
@@ -36,13 +37,13 @@ body {
     display: flex;
     justify-content: center;   
     align-items: center;
-    padding: 15px 0;
+    padding: 15px 10px;
 }
 
 ul {
     display: flex;       
     list-style: none;    
-    gap: 150px;           
+    gap: 20px; 
     margin: 0;
     padding: 0;
 }
@@ -54,195 +55,158 @@ ul li a {
 }
 
 .get {
-    margin-left: 50px;
+    margin-left: 20px;
     background: linear-gradient(90deg, #e60026 0%, #a3001a 100%);
     color: white;
-    padding: 10px 24px;         
+    padding: 10px 20px;          
     border: none;
-    border-radius: 50px;     
+    border-radius: 50px;      
     font-weight: bold;
     cursor: pointer;
+    white-space: nowrap;
 }
 
-/* HERO SECTION */
 .section2 {
-    padding: 80px 10%; 
+    padding: 50px 10%; 
     background-color: #f9f7f4; 
 }
 
 .herocontent2 {
     display: flex;
     align-items: center;      
-    justify-content: flex-start; 
-    gap: 50px;
+    justify-content: space-between; 
+    gap: 30px;
 }
 
-.herocontent {
+.herocontent { 
     flex: 1.2; 
 }
 
 .herocontent h3 {
-    font-size: 52px; 
+    font-size: 48px; 
     color: #4a0e4e; 
-    margin: 0 0 20px 0;
+    margin-bottom: 20px;
     line-height: 1.1;
 }
 
-.herocontent h3 span {
-    color: #ff007f; 
+.herocontent h3 span { 
+    color: #ff007f;
 }
 
 .herocontent p {
     font-size: 18px;
     color: #555;
-    margin-bottom: 35px;
-    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
-.hero-img-box {
+.hero-img-box { 
     flex: 1; 
-    text-align: right;
+    text-align: right; 
+}
+.hero-image { 
+    max-width: 100%;
+    height: auto; 
 }
 
-.hero-image {
-    max-width: 100%; 
-    height: auto;
+.herobtn { 
+    display: flex; 
+    gap: 15px; 
 }
 
-.herobtn {
+.learn, .Join {
+    color: white; 
+    border: none; 
+    padding: 12px 24px;
+    border-radius: 30px; 
+    font-weight: bold; 
+    cursor: pointer;
+}
+.learn {
+     background-color: #6a1b9a;
+}
+.Join {
+     background-color: #e60026;
+}
+
+.about, .who { 
+    font-size: 28px; 
+    color: #4a0e4e; 
+    margin-top: 40px;
+}
+.who-p { 
+    color: #4a0e4e; 
+    max-width: 800px; 
+}
+
+.about-cards, .values-grid {
     display: flex;
     gap: 15px;
+    margin-top: 30px;
 }
 
-.learn {
-    background-color: #6a1b9a;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.Join {
-    background-color: #e60026;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-@media (max-width: 600px) {
-    .logo-wrap {
-        flex-direction: column;
-        padding: 20px 0;
-    }
-    .shield {
-        height: 80px; 
-        margin-right: 0;
-    }
-    .list {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px;
-    }
-    ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    .get {
-        margin-left: 0; 
-        width: 80%;
-    }
-
-    .section2, .hero-section {
-        padding: 40px 5%; 
-        text-align: center;
-    }
-    .herocontent2, .container {
-        flex-direction: column !important; 
-        gap: 20px;
-    }
-    .hero-text h1, .herocontent h3 {
-        font-size: 32px !important; 
-        line-height: 1.2;
-    }
-    .hero-text p, .herocontent p {
-        font-size: 16px;
-        margin-bottom: 25px;
-    }
-    .hero-btns, .herobtn {
-        flex-direction: column; 
-        align-items: center;
-        width: 100%;
-    }
-    .hero-btns button, .herobtn button {
-        width: 100%; 
-        max-width: 280px;
-    }
-
-    .hero-img, .hero-img-box {
-        order: -1; 
-        width: 100%;
-    }
-    .hero-image, .hero-img img {
-        width: 80%; 
-        margin: 0 auto;
-    }
-
-    .card-container {
-        flex-direction: column !important;
-        gap: 15px;
-    }
-    .info-card {
-        width: 100%;
-    }
-}
-
-.about, .who{
-  font-size: 30px;
-  color: #4a0e4e;
-}
-.about, .who, p{
-  color: #4a0e4e;
-  margin-bottom: 0;
-}
-
-.about-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 10%;
-    background-color: #f9f7f4;
-}
-
-.info-card {
+.info-card, .value-card {
     flex: 1; 
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
-    text-align: left;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.purple-gradient {
-    background: linear-gradient(135deg, #4a0e4e, #e60026);
-    color: white;
+.purple-gradient { 
+    background: linear-gradient(135deg, #4a0e4e, #e60026); color: white; 
 }
-
-.white-bg {
-    background-color: white;
-    color: #333;
+.pink-gradient { 
+    background: linear-gradient(135deg, #ff007f, #ff66b2); color: white; 
 }
+.white-bg { 
+    background-color: white; 
+    color: #333; }
 
-.info-card img {
-    width: 50px;
-    margin-bottom: 15px;
-}
+@media (max-width: 600px) {
+    .list {
+         padding: 10px 5px; 
+        }
+    ul {
+         gap: 8px; 
+        } 
+    ul li a { 
+        font-size: 9px; 
+    }
+    .get { 
+        font-size: 9px; 
+        padding: 6px 12px; 
+        margin-left: 5px; 
+    }
 
-.info-card h4 {
-    margin-bottom: 10px;
-    font-size: 20px;
+    .herocontent2 { 
+        flex-direction: row !important; 
+        gap: 10px; } 
+    .herocontent h3 { 
+        font-size: 18px !important; 
+    }
+    .herocontent p { 
+        font-size: 10px; 
+        line-height: 1.2; 
+    }
+    .herobtn { 
+        flex-direction: row; 
+        gap: 5px; 
+    }
+    .learn, .Join { 
+        font-size: 8px; 
+        padding: 6px 10px; 
+    }
+
+    .about-cards, .values-grid { 
+        flex-direction: row !important; 
+        gap: 5px; 
+    }
+    .info-card, .value-card { 
+        padding: 10px 5px; 
+    }
+    .info-card h4, .value-card h4 { 
+        font-size: 10px; 
+    }
+    .info-card p, .value-card p { 
+        font-size: 8px; 
+    }
 }
