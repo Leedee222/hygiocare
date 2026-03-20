@@ -1,9 +1,12 @@
+/* --- BASE STYLES --- */
 body {
     margin: 0;
     font-family: sans-serif;
     overflow-x: hidden; 
+    background-color: #f9f7f4;
 }
 
+/* --- NAVIGATION --- */
 .top-bar {
     background-color: #4a0e4e;
     padding-bottom: 10px;
@@ -58,7 +61,7 @@ ul li a {
     margin-left: 20px;
     background: linear-gradient(90deg, #e60026 0%, #a3001a 100%);
     color: white;
-    padding: 10px 20px;          
+    padding: 10px 24px;          
     border: none;
     border-radius: 50px;      
     font-weight: bold;
@@ -66,9 +69,9 @@ ul li a {
     white-space: nowrap;
 }
 
+/* --- HERO SECTION --- */
 .section2 {
     padding: 50px 10%; 
-    background-color: #f9f7f4; 
 }
 
 .herocontent2 {
@@ -78,9 +81,7 @@ ul li a {
     gap: 30px;
 }
 
-.herocontent { 
-    flex: 1.2; 
-}
+.herocontent { flex: 1.2; }
 
 .herocontent h3 {
     font-size: 48px; 
@@ -90,7 +91,7 @@ ul li a {
 }
 
 .herocontent h3 span { 
-    color: #ff007f;
+    color: #ff007f; 
 }
 
 .herocontent p {
@@ -100,17 +101,14 @@ ul li a {
 }
 
 .hero-img-box { 
-    flex: 1; 
-    text-align: right; 
+    flex: 1; text-align: right; 
 }
 .hero-image { 
-    max-width: 100%;
-    height: auto; 
+    max-width: 100%; height: auto; 
 }
 
 .herobtn { 
-    display: flex; 
-    gap: 15px; 
+    display: flex; gap: 15px; 
 }
 
 .learn, .Join {
@@ -121,18 +119,20 @@ ul li a {
     font-weight: bold; 
     cursor: pointer;
 }
-.learn {
-     background-color: #6a1b9a;
+.learn { 
+    background-color: #6a1b9a; 
 }
-.Join {
-     background-color: #e60026;
+.Join { 
+    background-color: #e60026; 
 }
 
+/* --- ABOUT & CARDS --- */
 .about, .who { 
     font-size: 28px; 
     color: #4a0e4e; 
     margin-top: 40px;
 }
+
 .who-p { 
     color: #4a0e4e; 
     max-width: 800px; 
@@ -142,15 +142,45 @@ ul li a {
     display: flex;
     gap: 15px;
     margin-top: 30px;
+    width: 100%;
 }
 
 .info-card, .value-card {
     flex: 1; 
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
 }
 
+/* Icon Styles */
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.white-bg .icon-wrapper { 
+    background-color: #f3e5f5; 
+}
+
+.icon-wrapper img {
+    width: 70px; 
+    height: auto;
+    object-fit: contain;
+}
+
+.emoji-backup { 
+    font-size: 30px; 
+}
+
+/* Colors */
 .purple-gradient { 
     background: linear-gradient(135deg, #4a0e4e, #e60026); color: white; 
 }
@@ -158,55 +188,29 @@ ul li a {
     background: linear-gradient(135deg, #ff007f, #ff66b2); color: white; 
 }
 .white-bg { 
-    background-color: white; 
-    color: #333; }
+    background-color: white; color: #333; 
+}
 
 @media (max-width: 600px) {
-    .list {
-         padding: 10px 5px; 
-        }
-    ul {
-         gap: 8px; 
-        } 
-    ul li a { 
-        font-size: 9px; 
-    }
-    .get { 
-        font-size: 9px; 
-        padding: 6px 12px; 
-        margin-left: 5px; 
-    }
-
-    .herocontent2 { 
-        flex-direction: row !important; 
-        gap: 10px; } 
-    .herocontent h3 { 
-        font-size: 18px !important; 
-    }
-    .herocontent p { 
-        font-size: 10px; 
-        line-height: 1.2; 
-    }
-    .herobtn { 
-        flex-direction: row; 
-        gap: 5px; 
-    }
-    .learn, .Join { 
-        font-size: 8px; 
-        padding: 6px 10px; 
-    }
-
-    .about-cards, .values-grid { 
-        flex-direction: row !important; 
-        gap: 5px; 
-    }
-    .info-card, .value-card { 
+    .list { 
         padding: 10px 5px; 
     }
-    .info-card h4, .value-card h4 { 
-        font-size: 10px; 
-    }
-    .info-card p, .value-card p { 
-        font-size: 8px; 
-    }
+    ul { gap: 8px; } 
+    ul li a { font-size: 9px; }
+    .get { font-size: 9px; padding: 6px 12px; margin-left: 5px; }
+
+    .herocontent2 { flex-direction: row !important; gap: 10px; } 
+    .herocontent h3 { font-size: 18px !important; }
+    .herocontent p { font-size: 10px; line-height: 1.2; }
+    .herobtn { flex-direction: row; gap: 5px; }
+    .learn, .Join { font-size: 8px; padding: 6px 10px; }
+
+    .about-cards, .values-grid { flex-direction: row !important; gap: 5px; padding: 20px 0; }
+    .info-card, .value-card { padding: 10px 5px; border-radius: 8px !important; }
+    .info-card h4, .value-card h4 { font-size: 10px; margin-bottom: 4px; }
+    .info-card p, .value-card p { font-size: 8px; line-height: 1.1; }
+
+    .icon-wrapper { width: 25px; height: 25px; margin-bottom: 5px; }
+    .icon-wrapper img { width: 15px; }
+    .emoji-backup { font-size: 15px; }
 }
