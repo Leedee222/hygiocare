@@ -267,24 +267,26 @@ ul li a {
     .health, .impact, .susta, .prevent {
         padding: 20px;
     }
+    
     .allimpact {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 10px;
-    }
-    
-    .allimpact h3 {
-        font-size: 22px;
-    }
-    
-    .allimpact p {
-        font-size: 10px;
-    }
-     .team-grid { 
         grid-template-columns: 1fr; 
+        padding: 20px 15px;         
+        width: 100%;
+        box-sizing: border-box;
     }
-    .team-card:last-child { 
-        grid-column: span 1; 
-        width: 100%; 
+    .team-grid {
+        grid-template-columns: 1fr; 
+        padding: 20px 15px;         
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .team-card:last-child {
+        width: 100% !important; 
+        margin: 0;
+    }
+        .allimpact h3, .allimpact p {
+        font-size: 20px;
     }
 }
 .ourprogram {
@@ -322,11 +324,13 @@ ul li a {
     color: #4a0e4e;
 }
 
-.allimpact{
+.allimpact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 40px;
     gap: 20px;
+    width: 80%;       
+    margin: 0 auto;   
+    padding: 40px 0;
 }
 .support, .engage, .campaign, .people{
     background: linear-gradient(135deg, #4a0e4e 0%, #ff007f 100%);; 
@@ -340,9 +344,9 @@ ul li a {
     transition: transform 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1); 
 }
-h4{
-    font-size: 30px;
-    color: #4a0e4e;
+.section-title, .who { 
+    font-size: 30px; 
+    color: #4a0e4e; 
 }
 .allimpact p {
     font-size: 30px;
@@ -352,7 +356,7 @@ h4{
     text-shadow: 0 2px 4px rgba(0,0,0,0.2); 
     margin-bottom: 5px;
 }
-.allimpact:hover {
+.support:hover, .engage:hover, .campaign:hover, .people:hover {
     transform: translateY(-5px); 
 }
 
@@ -382,8 +386,8 @@ h4{
     height: 60px;
     background: #fdeff4; 
     border-radius: 50%;
-    margin-bottom: 30px;
     display: block;
+    margin: 0 auto 0 auto;
 }
 
 .team-info h5 {
@@ -409,6 +413,6 @@ h4{
 }
 .team-card:last-child {
     grid-column: span 2; 
-    width: 50%;
     margin: 0 auto;
+    width:50%;
 }
