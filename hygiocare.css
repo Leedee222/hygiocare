@@ -286,15 +286,6 @@ ul li a {
     border: 1px solid #f0f0f0;
 }
 
-.team-card::before {
-    content: "";
-    width: 60px;
-    height: 60px;
-    background: #fdeff4; 
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 0 auto;
-}
 
 .team-info h5 {
     color: #4a0e4e;
@@ -321,6 +312,14 @@ ul li a {
     grid-column: span 2; 
     margin: 0 auto;
     width:50%;
+}
+
+.team-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin: 0 auto 15px;
 }
 
 @media (max-width: 600px) {
@@ -403,7 +402,7 @@ ul li a {
         width: 100%;
         box-sizing: border-box;
     }
-    .team-grids {
+    .team-grid {
         grid-template-columns: 1fr; 
         padding: 20px 15px;         
         box-sizing: border-box;
