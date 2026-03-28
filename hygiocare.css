@@ -403,17 +403,16 @@ ul li a {
         width: 100%;
         box-sizing: border-box;
     }
-    .team-card {
+    .team-grids {
         grid-template-columns: 1fr; 
         padding: 20px 15px;         
-        width: 100%;
         box-sizing: border-box;
-        grid-column: span 1 !important;
     }
 
     .team-card:last-child {
         width: 100% !important; 
         margin: 0;
+        grid-column: span 1 !important;
     }
         .allimpact h3, .allimpact p {
         font-size: 20px;
